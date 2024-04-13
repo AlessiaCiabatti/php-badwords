@@ -1,6 +1,15 @@
 <?php
 $parola = $_POST['parola'];
 $paragrafo = $_POST['paragrafo'];
+
+$num_lettere = strlen($paragrafo);
+
+// echo strlen($paragrafo);
+
+// echo str_replace($parola, "***", $paragrafo)
+
+$paragrafo_2 = str_replace($parola, "***", $paragrafo);
+$num_lettere_par_2 = strlen($paragrafo_2);
 ?>
 
 
@@ -17,8 +26,12 @@ $paragrafo = $_POST['paragrafo'];
 </head>
 <body>
   <div class="container">
-    <h1>Parola: <?php echo $parola ?> </h1>
-    <h1>Paragrafo <?php echo $paragrafo ?> </h1>
+    <!-- <h1>Parola: <?php echo $parola ?> </h1> -->
+    <h1> <?php echo $paragrafo ?> </h1>
+
+    <h3>Il paragrafo ha <?php echo $num_lettere; ?> lettere</h3>
+    <h3><?php echo $paragrafo_2 ?></h3>
+    <h3>Il secondo pragrafo ha <?php echo $num_lettere_par_2 ?> lettere</h3>
   </div>
 </body>
 </html>
